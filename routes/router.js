@@ -135,7 +135,7 @@ router.post("/sendpasswordlink",async(req,res)=>{
                     from: 'dharani94667@gmail.com', // sender address
                     to: req.body.email, // list of receivers
                     subject: "Password Reset Link", // Subject line
-                    text: `This link is valid for 2 minutes http://localhost:3000/forgotpassword/${finduser._id}/${setusertoken.verifytoken}`// plain text body
+                    text: `This link is valid for 2 minutes https://password-reset-frontend-dharanivelkur.vercel.app/forgotpassword/${finduser._id}/${setusertoken.verifytoken}`// plain text body
                   }; 
 
                  transporter.sendMail(mailOptions,(error,info)=>{
